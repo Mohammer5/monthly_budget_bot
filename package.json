@@ -1,0 +1,50 @@
+{
+  "name": "market-maker-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/bot.js",
+  "scripts": {
+    "test": "jest --config ./config-files/jest.config.js",
+    "start": "node --inspect -r source-map-support/register dist/bot.js",
+    "run:redux-server": "node ./scripts/run-remote-dev-server.js",
+    "build:watch": "webpack --watch --config ./webpack/webpack.config.ts",
+    "build:dev": "webpack         --config ./webpack/webpack.config.ts",
+    "build": "webpack -p      --config ./webpack/webpack.config.ts"
+  },
+  "author": "Jan-Gerke Salomon",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^20.0.8",
+    "@types/rx": "^4.1.1",
+    "@types/sinon": "^2.2.2",
+    "@types/tapable": "^0.2.5",
+    "lodash": "^4.17.4",
+    "node-telegram-bot-api": "^0.30.0",
+    "redux": "^3.7.2",
+    "redux-observable": "^1.0.0",
+    "remote-redux-devtools": "^0.5.13",
+    "rxjs": "^6.1.0"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "devDependencies": {
+    "@types/webpack": "^2.2.15",
+    "file-loader": "^2.0.0",
+    "jest": "^22.4.4",
+    "pre-commit": "^1.2.2",
+    "sinon": "^2.2.0",
+    "source-map-loader": "^0.2.1",
+    "source-map-support": "^0.5.9",
+    "ts-jest": "^23.10.4",
+    "ts-loader": "^5.3.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.8.3",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "ws": "^6.1.1"
+  }
+}
